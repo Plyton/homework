@@ -31,9 +31,9 @@ function task_two() {
  * Если оба числа положительные, то разность.
  * Если оба числа отрицательные, то произведение.
  * Если знаки разные, то сумму.
- * @var {number} a - первое рандомное число, определяемое автоматически.
- * @var {number} b - второе рандомное число, определяемое автоматически.
- * @returns {number} - возвращает число согласно условию.
+ * @var {number} a первое рандомное число, определяемое автоматически.
+ * @var {number} b второе рандомное число, определяемое автоматически.
+ * @returns {number} возвращает число согласно условию.
  */
 function task_three() {
   let a = Math.round(Math.random() * 10 * ((Math.random() - 0.5) * 2)); // присваивает рандомное число от -9 до 9
@@ -50,39 +50,39 @@ function task_three() {
 //Задание 4
 /**
  * функция сложения двух чисел
- * @param {number} a - первое число
- * @param {number} b - второе число
- * @returns {number} - возвращает сумму чисел a и b
+ * @param {number} a первое число
+ * @param {number} b второе число
+ * @returns {number} возвращает сумму чисел a и b
  */
 const addition = (a, b) => a + b;
 /**
  * функция вычитания двух чисел
- * @param {number} a - первое число
- * @param {number} b - второе число
- * @returns {number} - возвращает разность чисел a и b
+ * @param {number} a первое число
+ * @param {number} b второе число
+ * @returns {number} возвращает разность чисел a и b
  */
 const subtraction = (a, b) => a - b;
 /**
  * функция умножения двух чисел
- * @param {number} a - первое число
- * @param {number} b - второе число
- * @returns {number} - возвращает произведение чисел a и b
+ * @param {number} a первое число
+ * @param {number} b второе число
+ * @returns {number} возвращает произведение чисел a и b
  */
 const multiplication = (a, b) => a * b;
 /**
  * функция деления двух чисел
- * @param {number} a - первое число
- * @param {number} b - второе число
- * @returns {number} - возвращает частное чисел a и b
+ * @param {number} a первое число
+ * @param {number} b второе число
+ * @returns {number} возвращает частное чисел a и b
  */
 const division = (a, b) => a / b;
 
 //Задание 5
 /**
  * функция реализовывает арифметические операции двух чисел (сложение, вычитание, умножение, деление)
- * @param {number} arg1 - первое число
- * @param {number} arg2 - второе число
- * @param {string} operation - выбрать одну из арифметических операций "+" "-" "*" "/"
+ * @param {number} arg1 первое число
+ * @param {number} arg2 второе число
+ * @param {string} operation выбрать одну из арифметических операций "+" "-" "*" "/"
  * @returns {number} возвращает число согласно выбранной арифметической операции
  */
 function mathOperation(arg1, arg2, operation) {
@@ -105,12 +105,28 @@ function mathOperation(arg1, arg2, operation) {
 }
 
 //Задание 6
+/**
+ * Функция возвращает строку введённую пользователем в input,
+ * если строка пустая, то возвращается "0"
+ * @returns {string} возвращает пользовательскую строку
+ */
+function getEnterString() {
+  let amount = document.querySelector(".stringEnter");
+  if (amount.value == "") {
+    amount.value = "0";
+  }
+  return amount.value;
+}
+/**
+ * Функция определяет верный падеж "рубль" и возвращает итоговую строку
+ * @returns {string} возвращает итоговую строку в transferAmount()
+ */
 function wordVerification() {
-  let str = getEnterString();
-  let preLastLetter = str.charAt(str.length - 2);
-  let lastLetter = str.charAt(str.length - 1);
-  let ruble = "";
-  if (preLastLetter != 1) {
+  let str = getEnterString(); // присваивает введённую пользователем в input строку
+  let preLastLetter = str.charAt(str.length - 2); //присваивает предпоследний симвой строки str
+  let lastLetter = str.charAt(str.length - 1); //присваивает последний символ строки str
+  let ruble = ""; //присваивает верный падеж "рубль"
+  if (preLastLetter != 1) { //c 11 до 19 падежи пишутся иначе
     switch (lastLetter) {
       case "1":
         ruble = "рубль";
@@ -128,26 +144,18 @@ function wordVerification() {
   }
   return `Ваша сумма в ${str} ${ruble} успешно зачислена.`;
 }
-
-function getEnterString() {
+/**
+ * Функция выводит сообщение о зачислении суммы
+ * @param {string} enrollmentReport строка возвращённая wordVerification()
+ */
+function transferAmount(enrollmentReport) {
   let amount = document.querySelector(".stringEnter");
-  if (amount.value == "") {
-    amount.value = "0";
-  }
-  return amount.value;
+  let ts = (amount.value = enrollmentReport);
 }
-
-function transferAmount(strUser) {
-  let amount = document.querySelector(".stringEnter");
-  let ts = amount.value = strUser;
-}
-
+/**
+ * Функция очищает строку ввода input
+ */
 function clearString() {
   let amount = document.querySelector(".stringEnter");
   amount.value = "";
 }
-
-function test() {
-
-}
-

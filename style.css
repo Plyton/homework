@@ -35,7 +35,7 @@ form::after {
 .stringEnter {
   width: 500px;
   height: 40px;
-  background: linear-gradient(45deg, #73e073, #a2e6a0);
+  background: linear-gradient(179deg, #659fd9, #d7c1dc);
   text-indent: 10px;
   color: black;
   font-weight: 700;
@@ -49,8 +49,8 @@ form::after {
 .but {
   margin: 2px 2px 2px 0px;
   padding: 5px;
-  border: green 2px ridge;
-  background: linear-gradient(45deg, #73e073, #a2e6a0);
+  border: #70787b 2px ridge;
+  background: linear-gradient(4deg, #72a3da, #bdb9dc);
   font-weight: 700;
 }
 .but:active {
