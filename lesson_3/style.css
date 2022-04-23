@@ -1,0 +1,186 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+.container {
+  height: 100vh;
+  background: url(images/background_heaer.jpg) no-repeat;
+  background-size: 100% 100%;
+}
+
+/* Блок Header */
+.header {
+  height: 15%;
+}
+.header-main {
+  height: 75%;
+  background: url(images/testy.jpeg) no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/*rgb(140, 127, 255)*/
+.header-nav {
+  height: 25%;
+  background: linear-gradient(180deg, #cfc8ec, #4e5eeb);
+}
+.header-list {
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  list-style-type: none;
+}
+.header-list-item {
+  color: #001a7c;
+  font-size: 20px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* Блок Main */
+.main {
+  height: 75%;
+}
+
+.main-wrapper {
+  height: 100%;
+  overflow: auto;
+  background-color: #ffffff4d;
+  padding: 10px;
+
+}
+
+.main-task-one,
+.main-task-two,
+.main-task-three,
+.main-task-four,
+.main-task-five,
+.main-task-six {
+  height: 100%;
+  padding: 10px;
+}
+.main-task-one {
+  display: none;
+}
+.main-task-two {
+  display: none;
+}
+.main-task-three {
+  display: none;
+}
+.main-task-four {
+  display: none;
+}
+.main-task-five {
+  display: none;
+}
+.main-task-six {
+  display: none;
+}
+.main-task-item {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  font-style: italic;
+  list-style-position: inside;
+  color: #283c6a;
+}
+.main-task-item li {
+  margin-top: 5px;
+}
+
+.main-task-code {
+  width: 40%;
+  height: 100%;
+  border: 5px #666dac solid;
+  background-color: #262525;
+  float: right;
+  margin-left: 5px;
+  overflow: auto;
+}
+
+.main-task-code p {
+  color: #bbcaf4;
+  font-size: 18px;
+  font-weight: 400;
+  margin: 10px;
+  white-space: pre;
+  
+}
+
+.main-task-wrapper {
+  height: 100%;
+  overflow: auto;
+  padding: 10px;
+  border-radius: 10px 0px 0px 10px;
+  background-color: #ffffff77;
+}
+
+.main-task-text {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  text-align: justify;
+  color: #283c6a;
+}
+
+.main-code-style {
+  font-family: 'Franklin Gothic Medium', Arial, sans-serif;
+  margin-top: 10px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #25262e;
+}
+
+/* Блок Footer */
+.footer {
+  height: 7%;
+  background-color: #8c7fff;
+}
+
+h1 {
+  font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+  font-size: 50px;
+  letter-spacing: 5px;
+}
+
+a {
+  font-style: normal;
+}
+a:visited {
+  color: #283c6a;
+}
+
+.main-wrapper::-webkit-scrollbar {
+  width: 0;
+}
+.main-wrapper::-moz-scrollbar {
+  width: 0;
+}
+.main-wrapper::-o-scrollbar {
+  width: 0;
+}
+.main-task-code::-webkit-scrollbar {
+  width: 0;
+}
+.main-task-code::-moz-scrollbar {
+  width: 0;
+}
+.main-task-code::-o-scrollbar {
+  width: 0;
+}
+.main-task-wrapper::-webkit-scrollbar {
+   width: 0;
+}
+.main-task-wrapper::-moz-scrollbar {
+   width: 0;
+}
+.main-task-wrapper::-o-scrollbar {
+   width: 0;
+}
+
+
+
+
